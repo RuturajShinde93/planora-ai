@@ -1,16 +1,58 @@
-# React + Vite
+# 🌍 Planora AI — Smart Vacation & Trip Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Planora AI is an intelligent travel planning web application built with **React (Vite)**, **Google Gemini 3.6 Flash**, and **Supabase**. It generates personalized day-by-day itineraries, estimated travel budgets, and hotel recommendations based on destination, duration, budget tier, and group type.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+* 🤖 **AI-Driven Itinerary Generation**: Day-wise activity schedules powered by Google Gemini 3.6.
+* 🏨 **Curated Stays & Budgets**: Context-aware hotel recommendations and budget estimates.
+* 🔐 **Supabase Authentication**: Secure user registration, login, and session persistence.
+* 🗄️ **Persistent Trip Blueprints**: Row-Level Security (RLS) protected database storage per user account.
+* 🎨 **Modern Travel UI**: Clean, responsive layout with intuitive filter cards and instant feedback.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend**: React, Vite, Tailwind CSS / Lucide React
+* **AI Model**: Google Gemini 3.6 Flash (`@google/generative-ai`)
+* **Database & Auth**: Supabase (PostgreSQL + Auth)
+* **Deployment**: Vercel
+
+---
+
+## 🚀 Getting Started Locally
+
+### 1. Clone the repository
+\`\`\`bash
+git clone https://github.com/RuturajShinde93/planora-ai.git
+cd planora-ai
+\`\`\`
+
+### 2. Install dependencies
+\`\`\`bash
+npm install
+\`\`\`
+
+### 3. Setup Environment Variables
+Create a \`.env\` file in the root directory and add your credentials:
+
+\`\`\`env
+VITE_GEMINI_API_KEY=your_gemini_api_key
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+\`\`\`
+
+### 4. Run Development Server
+\`\`\`bash
+npm run dev
+\`\`\`
+
+---
+
+## 🔒 Security & Best Practices
+
+* Sensitive keys (`.env`) are strictly excluded from version control via `.gitignore`.
+* Database queries utilize Supabase Row Level Security (RLS) policies to ensure private user isolation.
