@@ -1,0 +1,1 @@
+const prompt = `Generate a trip plan for a ${destination} vacation.`
